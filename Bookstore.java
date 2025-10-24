@@ -130,41 +130,5 @@ public class Bookstore {
     }
 }
 
-/*Part 4: Arrays vs. ArrayList 
-in handling static and dynamic datasets
-//Name: Bahdan Mikhailau
-   
-- Arrays:
-
-*The data is static and the size of this
-type of dataset cannot be changed.
-
-*This type of dataset is best suited for cases
-when the data is predefined and the total number 
-of elements is known in advance.
-
-*Arrays provide less flexibility when operating on data.
-
-*This type of dataset provides fast access to the elements 
-using index.
-
-- ArrayList:
-
-*The data is dynamic and the elements can be added and 
-removed with the dataset adjusting its size.
-
-*This type of dataset is best suited for realistic cases
-when the data is constantly changing over time.
-
-*This type of dataset provides slower access to the elements,
-however, it is much more convenient to add or remove elements.
-
-- Conclusion:
-Arrays should be used in "static" datasets when the data is predefined 
-and the size of the dataset is known. ArrayList is well suited for
-"dynamic" datasets, which is a more realistic case because data is
-changing over time.
-*/
-
 
 
