@@ -15,9 +15,17 @@ When datasets get larger, being able to search and sort efficiently affects: mem
 ## Main Features
 The features that the bookstore database has includes: searching and sorting, array 
 
+### Validation Logic Chapter 9
+
 Validation Logic from chapter 9 means to have an InvalidTitleException that is able to throw an exception if a user enters an empty book title. As well as having InvalidIsbnException that makes sure to have proper ISBN that is used for formatting and length checks. This type of validation ensures that the dataset maintains its structural integrity before being stored, which is similar to a data validation in AI preprocessing.
 
 ### Example Inputs Screenshots:
+
+## Valid input/output
+<img width="336" height="381" alt="Screen Shot 2025-10-26 at 6 12 53 PM" src="https://github.com/user-attachments/assets/f5ed20ce-bf06-47b5-a8ca-948957d932b6" />
+
+## Invalid input/output
+<img width="473" height="219" alt="Screen Shot 2025-10-26 at 6 20 54 PM" src="https://github.com/user-attachments/assets/776e4257-b895-4372-aad0-bdceba1f1d51" />
 
 
 
@@ -25,14 +33,15 @@ Validation Logic from chapter 9 means to have an InvalidTitleException that is a
 
 Class Hierachy and Inheritance Summary from chapter 10 means the current implementation of a single class that is Bookstore, the design does support extension into a class hierarchy that includes: Bookstore as the main class that is in charge of managing the collection logic, file operations and searches.
 
-As well as InvalidIsbnException and InvalidTitleException extend to Exception, that represents the custom rule-based validation errors.
+As well as having Book the superclass contain attributes that are shared amogst eachother that includes: author, title and price. Plus, for Ebooks and printed books that are the subclasses, they extend the Book class in their purpose to adding specific attributes such as file size and shipping weight.
 
-In the future some more inheritance will include the Book superclass extending to ebook and PrintedBook subclasses and InventoryItem superclass that is used for connecting the data handling across the store types. 
 
 ### Exception Handling Chapter 11
-Exception Handling from chapter 11 means that having exceptions implemented in the code helps greatly improve error clarity and maintain a smoother flow of the program. This showcases a pattern that mimics 
+Exception Handling from chapter 11 means that having exceptions implemented in the code helps greatly improve error clarity and maintain a smoother flow of the program. In the bookstore program, we used try-catch to handle any unexpected events that can include: Invalid user input, conversion errors, unreadable files and missing files.
 
 Code Example:
+
+
 
 Output:
 
@@ -40,6 +49,10 @@ Output:
 File I/O Implementation means file handling that gives the users the ability to save and reload book data between sessions using plain text files. 
 
 The methods used to save all current book titles to a text file is by using saveBooksToFile(ArrayList<String> bookList) that saves to a text file named books.txt.
+
+## Example of I/O
+<img width="335" height="365" alt="Screen Shot 2025-10-26 at 6 21 33 PM" src="https://github.com/user-attachments/assets/2a0c6930-7f4e-4e9b-81f8-dd9618780a52" />
+
 
 
 ### Recursive method Chapter 15
