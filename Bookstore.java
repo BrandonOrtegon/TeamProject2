@@ -1,6 +1,21 @@
 import java.util.Scanner;
 import java.util.ArrayList; 
+import java.util.*;
+import java.io.*;
 
+//Jayla Craddock Part 3
+class InvalidTitleException extends Exception {
+    public InvalidTitleException(String message) {
+        super(message);
+    }
+}
+
+class InvalidIsbnException extends Exception {
+    public InvalidIsbnException(String message) {
+        super(message);
+    }
+}
+// End of Part 3
 
 //Part 2. Inheritance and Part 6 Recursive – Expanding the Book Model
 //Name: Jeffrey Ortegon
@@ -151,6 +166,96 @@ public class Bookstore {
             }
         }
     }
+
+    // Jayla Craddock Part 3
+// Save all books to a text file with duplicates removed
+public static void saveBooksToFile(ArrayList<String> bookList) {
+    try (PrintWriter writer = new PrintWriter(new File("books.txt"))) {
+
+        ArrayList<String> totalBooks = new ArrayList<>();
+        
+        
+        // Add array books (if they exist)
+        for (int i = 0; i < books.length; i++) {
+            if (books[i] != null && !books[i].trim().isEmpty()) {
+                totalBooks.add(books[i] + " (" + genres[i] + ")");
+            }
+        }
+
+        // Add books from ArrayList
+        for (String book : bookList) {
+            totalBooks.add(book);
+        }
+
+        // Manually remove duplicates
+        ArrayList<String> uniqueBooks = new ArrayList<>();
+        for (String book : totalBooks) {
+            boolean duplicateFound = false;
+            for (String unique : uniqueBooks) {
+                if (unique.equalsIgnoreCase(book)) {
+                    duplicateFound = true;
+                    break;
+                }
+            }
+            if (!duplicateFound) {
+                uniqueBooks.add(book);
+            }
+        }
+
+        // Write unique titles to file
+        for (String book : uniqueBooks) {
+            writer.println(book);
+        }
+
+        System.out.println(" Books successfully saved to books.txt");
+    } catch (IOException e) {
+        System.out.println("Error saving books: " + e.getMessage());
+    } finally {
+        System.out.println("Save operation complete.");
+    }
+}
+
+
+// Jayla Craddock Part 3
+// Load all books from text file
+public static ArrayList<String> loadBooksFromFile() {
+    ArrayList<String> loadedBooks = new ArrayList<>();
+    try (Scanner fileScanner = new Scanner(new File("books.txt"))) {
+        int arrayIndex = 0;
+        
+        while (fileScanner.hasNextLine()) {
+            String line = fileScanner.nextLine();
+            loadedBooks.add(line);
+            
+              // Also refill the arrays (first 5 entries only)
+            if (arrayIndex < books.length) {
+                books[arrayIndex] = line;
+                genres[arrayIndex] = "Unknown"; // Default if not listed
+                arrayIndex++;
+            }
+        }
+        System.out.println("Books successfully loaded from books.txt");
+    } catch (FileNotFoundException e) {
+        System.out.println("Sorry, books.txt not found. Please save books first.");
+    } finally {
+        System.out.println("Load operation complete.");
+    }
+    return loadedBooks;
+}
+// End of Part 3
+
+
+//Jayla Craddock Part 3
+        saveBooksToFile(dynamicBooks);
+
+        System.out.println("Would you like to load all your books from file? (yes or no): ");
+        if (keyboard.nextLine().equalsIgnoreCase("yes")) {
+            ArrayList<String> loadedBooks = loadBooksFromFile();
+            System.out.println("Here are your loaded Books:");
+            for (String b : loadedBooks) {
+                System.out.println(b);
+            }
+        } //End of Part 3
     
     // recursive method to count genres that match
     public static int matchingGenres(String keyword, int count){
@@ -207,6 +312,7 @@ public class Bookstore {
         buyBook();
     }
 }
+
 
 
 
