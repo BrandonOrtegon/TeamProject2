@@ -243,19 +243,6 @@ public static ArrayList<String> loadBooksFromFile() {
     return loadedBooks;
 }
 // End of Part 3
-
-
-//Jayla Craddock Part 3
-        saveBooksToFile(dynamicBooks);
-
-        System.out.println("Would you like to load all your books from file? (yes or no): ");
-        if (keyboard.nextLine().equalsIgnoreCase("yes")) {
-            ArrayList<String> loadedBooks = loadBooksFromFile();
-            System.out.println("Here are your loaded Books:");
-            for (String b : loadedBooks) {
-                System.out.println(b);
-            }
-        } //End of Part 3
     
     // recursive method to count genres that match
     public static int matchingGenres(String keyword, int count){
@@ -310,8 +297,21 @@ public static ArrayList<String> loadBooksFromFile() {
         displayBooks();
         searchGenres();
         buyBook();
+
+        //Jayla Craddock Part 3
+        saveBooksToFile(dynamicBooks);
+
+        System.out.println("Would you like to load all your books from file? (yes or no): ");
+        if (keyboard.nextLine().equalsIgnoreCase("yes")) {
+            ArrayList<String> loadedBooks = loadBooksFromFile();
+            System.out.println("Here are your loaded Books:");
+            for (String b : loadedBooks) {
+                System.out.println(b);
+            }
+        } //End of Part 3
     }
 }
+
 
 
 
