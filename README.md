@@ -40,6 +40,7 @@ As well as having Book the superclass contain attributes that are shared amogst 
 Exception Handling from chapter 11 means that having exceptions implemented in the code helps greatly improve error clarity and maintain a smoother flow of the program. In the bookstore program, we used try-catch to handle any unexpected events that can include: Invalid user input, conversion errors, unreadable files and missing files.
 
 Code Example:
+<img width="640" height="421" alt="Screen Shot 2025-10-26 at 6 38 15 PM" src="https://github.com/user-attachments/assets/c98b78b1-dcc4-4b0c-8f52-5bcd2c0215cb" />
 
 
 
