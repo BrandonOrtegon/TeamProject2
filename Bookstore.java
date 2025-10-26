@@ -76,8 +76,12 @@ public class Bookstore {
             System.out.print("Enter the authors name: ");
             String author = input.nextLine();
 
-            System.out.print("Enter the book genre: ");
-            String genre = input.nextLine();
+            String suggested = suggestGenre(title);
+            System.out.println("Suggested Genre: " + suggested);
+            
+            System.out.print("Enter the book genre (Press enter to use suggested genre): ");
+            String genreInput = input.nextLine();
+            String genre = genreInput.isEmpty() ? suggested : genreInput;
 
             System.out.print("Enter the number of pages: ");
             int pages = Integer.parseInt(input.nextLine());
@@ -101,7 +105,7 @@ public class Bookstore {
         
         // selecting the book 
         System.out.print("Enter the number of the book you want to order: ");
-        int bookNum = Integer.parseInt(input.nextLine());
+        int bookNum = Integer.parseInt(input.nextLine())-1;
         
         if(bookNum < 0 || bookNum >= books.length || books[bookNum] == null){
             System.out.println("Please enter a valid selection");
@@ -169,6 +173,31 @@ public class Bookstore {
         
         int keywordCountMatch = matchingGenres(keyword, 0);
         System.out.println("We found: " + keywordCountMatch + " title(s) that have " + keyword + " as the genre!");
+    }
+    
+    // Ryan Kostka Part 4
+    public static String suggestGenre(String title) {
+    	// checks to make sure the string isnt some invalid format
+    	if(title == null || title.isEmpty()) return "Invalid title";
+    	String lower = title.toLowerCase();
+    	
+    	// different cases for genre recommendation
+    	if(lower.contains("dragon") || lower.contains("Sword"))
+    		return "Fantasy";
+    	else if(lower.contains("space") || lower.contains("planet") || lower.contains("alien"))
+    		return "Sci-fi";
+    	else if(lower.contains("detective") || lower.contains("murder") || lower.contains("mystery"))
+    		return "Mystery";
+    	else if(lower.contains("love"))
+    		return "Romance";
+    	else if(lower.contains("war") || lower.contains("battle"))
+    		return "Historical";
+    	else if(lower.contains("ghost") || lower.contains("killer"))
+    		return "Horror";
+    	else if(lower.contains("biography") || lower.contains("memoir") || lower.contains("life"))
+    		return "Non-fiction";
+    	else
+    		return "General";
     }
 
     public static void main(String[] args) {
