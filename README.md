@@ -51,6 +51,40 @@ Sorting and searching algorithms from chapter 16 are used to locate a book in th
 ### Sorting and Searching Algorithms Chapter 16
 Sorting and searching algorithms from chapter 16 are used to locate a book in the ArrayList. Big-O Complexity will be that the Best Case: O(1) means that the item is found and the Worth Case: O(n) means to scan the entire list.
 
+## Sorting and Searching Implementation (Part 5 – Bahdan Mikhailau)
+
+### Selection Sort
+- Algorithm that repeatedly finds the smallest element and places it in sorted order.  
+- **Big-O Analysis:**  
+  - Best case: O(n²)  
+  - Average case: O(n²)  
+  - Worst case: O(n²)  
+- Implemented on the array of `Book` objects, showing basic comparison-based sorting using `String.compareToIgnoreCase()`.
+
+### Merge Sort
+- Efficient sorting algorithm that recursively splits and merges arrays.  
+- **Big-O Analysis:**  
+  - Best case: O(n log n)  
+  - Average case: O(n log n)  
+  - Worst case: O(n log n)  
+- Preferred for larger datasets because of its logarithmic growth behavior.
+
+### Binary Search
+- Efficient searching algorithm that works only on sorted arrays.  
+- Reduces the search space by half each iteration.  
+- **Big-O Analysis:**  
+  - Best case: O(1)  
+  - Average case: O(log n)  
+  - Worst case: O(log n)  
+- Demonstrates how algorithmic efficiency scales for large datasets.
+
+### AI Insight
+Sorting and searching algorithms are essential for efficiently organizing and finding data.  
+These algorithms are similar to how AI systems process large datasets.  
+For instance, **Merge Sort** resembles AI breaking complex problems into smaller parts,  
+and **Binary Search** mirrors the decision-making steps in machine learning models.  
+This demonstrates how algorithmic design principles contribute to scalable AI efficiency.
+
 ## Screenshots
 
 Sample Code from books.txt
