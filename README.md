@@ -86,8 +86,30 @@ and **Binary Search** mirrors the decision-making steps in machine learning mode
 This demonstrates how algorithmic design principles contribute to scalable AI efficiency.
 
 ## Screenshots
+## Displays Adding and Auto-Genre Prediction in Console
+<img width="668" height="566" alt="Screen Shot 2025-10-26 at 6 08 40 PM" src="https://github.com/user-attachments/assets/3f9ea7ec-5960-4d3c-b642-600ac382ad6a" />
 
-Sample Code from books.txt
+
+## Displays Recursive output and Sorting and Searching
+<img width="341" height="300" alt="Screen Shot 2025-10-26 at 6 11 35 PM" src="https://github.com/user-attachments/assets/2630617f-90f2-4efb-ba6f-42e370202765" />
+
+
+## Displays displaying all books
+<img width="336" height="381" alt="Screen Shot 2025-10-26 at 6 12 53 PM" src="https://github.com/user-attachments/assets/bff95a65-9a0c-49b2-9ef4-355d93892a67" />
+
+
+
+
+## Sample Code from books.txt
+## First Screenshot demostrates Save
+<img width="340" height="372" alt="Screen Shot 2025-10-26 at 6 01 33 PM" src="https://github.com/user-attachments/assets/51e49447-dac0-4856-a4f7-6766430dcc71" />
+
+## Second Screenshot demonstrates Load
+<img width="343" height="338" alt="Screen Shot 2025-10-26 at 6 02 00 PM" src="https://github.com/user-attachments/assets/bd71225b-dfcb-49ce-9629-a7d05a060e4e" />
+
+
+
+
 
 ## Authors
 Jayla Craddock, Jeffrey Ortegon, Sahima Durrani, Ryan Kostka, Bahdan Mikhailau 
