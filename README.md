@@ -13,7 +13,7 @@ When datasets get larger, being able to search and sort efficiently affects: mem
 
 
 ## Main Features
-The features that the bookstore database has includes: searching and sorting, array 
+The features that the bookstore database has includes: searching and sorting, adding book titles to text files and recursing through the list of book titles. 
 
 ### Validation Logic Chapter 9
 
@@ -44,26 +44,28 @@ Code Example:
 
 
 
-Output:
-
 ### File I/O Implementation
 File I/O Implementation means file handling that gives the users the ability to save and reload book data between sessions using plain text files. 
 
-The methods used to save all current book titles to a text file is by using saveBooksToFile(ArrayList<String> bookList) that saves to a text file named books.txt.
+The methods used to save all current book titles to a text file is by using saveBooksToFile that saves to a text file named books.txt.
 
 ## Example of I/O
 <img width="335" height="365" alt="Screen Shot 2025-10-26 at 6 21 33 PM" src="https://github.com/user-attachments/assets/2a0c6930-7f4e-4e9b-81f8-dd9618780a52" />
+
+## Example Code of I/O
+<img width="507" height="132" alt="Screen Shot 2025-10-26 at 6 43 39 PM" src="https://github.com/user-attachments/assets/592112ff-3047-4c27-9e1f-2b49b667ad8e" />
+
 
 
 
 ### Recursive method Chapter 15
 Recursive method chapter 15 means to 
 
-Sorting and searching algorithms from chapter 16 are used to locate a book in the ArrayList. Big-O Complexity will be that the Best Case: O(1) means that the item is found and the Worth Case: O(n) means to scan the entire list
+Sorting and searching algorithms from chapter 16 are used to locate a book in the Array. Big-O Complexity will be that the Best Case: O(1) means that the item is found and the Worth Case: O(n) means to scan the entire list
 
 
 ### Sorting and Searching Algorithms Chapter 16
-Sorting and searching algorithms from chapter 16 are used to locate a book in the ArrayList. Big-O Complexity will be that the Best Case: O(1) means that the item is found and the Worth Case: O(n) means to scan the entire list.
+Sorting and searching algorithms from chapter 16 are used to locate a book in the Array. Big-O Complexity will be that the Best Case: O(1) means that the item is found and the Worth Case: O(n) means to scan the entire list.
 
 ## Sorting and Searching Implementation (Part 5 – Bahdan Mikhailau)
 
